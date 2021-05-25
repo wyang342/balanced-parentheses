@@ -22,7 +22,7 @@ def balance_parens(str):
             # add char to balanced_str_final only if it's untracked in opening_parens_index_list (which means the char is "balanced")
             if i not in opening_parens_index_list:
                 balanced_str_final += char
-    else:  # if all chars are "balanced", add all chars to balanced_str_final
+    else:  # if all chars are "balanced", add then balanced_str_initial is balanced_str_final
         balanced_str_final = balanced_str_initial
 
     return balanced_str_final
