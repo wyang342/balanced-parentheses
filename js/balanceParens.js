@@ -5,7 +5,7 @@ const balanceParens = (str) => {
   for (let i = 0; i < str.length; i++) {
     let char = str[i];
     if (char === "(") {
-      openingParensArray.push(i);
+      openingParensArray.push(balancedStrInitial.length);  // add the index of the "(" in balancedStrInitial to openingParensArray. Later, we loop through balancedStrInitial and remove the char if its index matches what's in openingParensArray
     } else if (char === ")") {
       if (openingParensArray.length === 0) {
         continue;
@@ -30,7 +30,7 @@ const balanceParens = (str) => {
   return balancedStrFinal
 }
 
-console.log(balanceParens(")abc((d)e(fgh)(i)j(k"));
+console.log(balanceParens(")a(b)c)("));
 
 
 module.exports = balanceParens;

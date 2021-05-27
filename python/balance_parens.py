@@ -6,7 +6,7 @@ def balance_parens(str):
 
     for i, char in enumerate(str):
         if (char == "("):  # if char is "(", keep track of it by adding its index to list
-            opening_parens_index_list.append(i)
+            opening_parens_index_list.append(len(balanced_str_initial))
         elif (char == ")"):
             # if no opening parens tracked in list, ignore the closing parens
             if (len(opening_parens_index_list) == 0):
@@ -26,3 +26,6 @@ def balance_parens(str):
         balanced_str_final = balanced_str_initial
 
     return balanced_str_final
+
+
+print(balance_parens(")c(b)c)("))
